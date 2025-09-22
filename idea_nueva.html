@@ -1,0 +1,287 @@
+<html>
+<head>
+<title>Tiendas 3B</title>
+<style>
+body {
+    margin: 0px;
+    border: 8px solid rgb(146, 1, 1);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+img.logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 130px;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    margin: 10px 0;
+}
+
+/* Botón Productos centrado */
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.center-button button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: rgb(146,1,1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Menú Consulta/Alta/Baja */
+nav {
+    display: none;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+nav label {
+    padding: 12px 20px;
+    background-color: rgb(146, 1, 1);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="radio"] { display: none; }
+
+/* Secciones */
+.section {
+    display: none;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid rgb(146, 1, 1);
+    border-radius: 10px;
+}
+
+.producto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.producto img {
+    width: 80px;
+}
+
+.descripcion {
+    max-width: 700px;
+}
+
+button.small {
+    background: rgb(146,1,1);
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    width: 60px;
+}
+
+/* Productos que aparecen después de dar click */
+#productos-section {
+    display: none;
+    margin: 20px auto;
+    max-width: 900px;
+}
+</style>
+</head>
+<body>
+
+<h1 id="bienvenido">BIENVENIDO A LA TIENDA 3B</h1>
+
+<!-- Botón Productos centrado -->
+<div class="center-button" id="productos-btn-container">
+    <button id="productos-btn">Productos</button>
+</div>
+
+<!-- Menú Consulta/Alta/Baja -->
+<nav id="menu-nav">
+    <input type="radio" name="menu" id="consulta">
+    <input type="radio" name="menu" id="alta" checked>
+    <input type="radio" name="menu" id="baja">
+    <label for="consulta">Consulta</label>
+    <label for="alta">Alta</label>
+    <label for="baja">Baja</label>
+</nav>
+
+<!-- Sección Productos -->
+<div id="productos-section">
+    <div class="producto">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_686131-MLU70065185563_062023-F.webp" alt="Maruchan">
+        <p class="descripcion"><b>Maruchan:Es barata, rica, la puedes encontrar de diferentes sabores en diferentes presentaciones, es algo rápido de hacer y sin complicaciones solo siguiendo las instrucciones con un precio de $18 pesos .</b></p>
+    </div>
+    <div class="producto">
+        <img src="https://imgs.search.brave.com/_UeoqklnGzApqAb20LlXNgsYS0kQYrQAFwnqfBgJ8ZY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzc5OTE3MC1NTE03/MDY1MzI2NzI1M18w/NzIwMjMtRS1zZXQt/ZGUtcGVyZnVtZXMt/aGVsbG8ta2l0dHkt/eS1oZWxsby1mcm9z/dGVkLWNvY29udXQt/ZC1mdWxsZXIud2Vi/cA" alt="Hello Kitty">
+        <p class="descripcion"><b>Perfume Hello Kitty: Es dulce, delicado y encantador, con un aroma que refleja la ternura de Hello Kitty. Ideal para usar todos los días, ligero y fresco, perfecto para quienes aman los toques suaves, Hazte fan de hello kitty precio desde $50 pesos hasta $100 pesos.</b></p>
+    </div>
+    <div class="producto">
+        <img src="https://imgs.search.brave.com/M07LvhjESTzBsV0QgSDylAj8U-omGr2SJ1oYP_1KZEo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2EyL2I3/LzhiL2EyYjc4Yjhm/MzkyNTIwYjEwOWUy/OTVmYmY1YjI1Y2I2/LmpwZw" alt="Sabritas">
+        <p class="descripcion"><b>Sabritas:Son crujientes, sabrosos y llenos de sabor, disponibles en diferentes variedades y tamaños. Ideales para un snack rápido, fáciles de disfrutar en cualquier momento y perfectos para acompañar tus momentos de antojo sin complicaciones comprecio de $15 pesos a $20 pesos</b></p>
+    </div>
+    <div class="producto">
+        <img src="https://www.tiendas3b.com/wp-content/uploads/2025/05/NUESTRO-CAMPO_Ensalada-de-verduras-430g_02.jpg" alt="Verduras">
+        <p class="descripcion"><b>Verduras:Es saludable, práctica y lista para usar en cualquier comida. Contiene una mezcla de vegetales frescos en conserva, perfecta para ensaladas rápidas o acompañamientos, fácil de preparar y sin complicaciones con un precio bajo de $15 a $30 pesos.</b></p>
+    </div>
+    <div class="producto">
+        <img src="https://imgs.search.brave.com/RxL-l_fLagR6ALhwWk1UH-7E6cWs_EtGj8bLhQrZrek/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y29jaW5hdml0YWwu/bXgvd3AtY29udGVu/dC91cGxvYWRzLzIw/MjQvMDkvcmVmcmVz/Y29zLW1lbm9zLWF6/dWNhci02MzR4NDIw/LmpwZw" alt="Refrescos">
+        <p class="descripcion"><b>Refrescos: Son refrescantes, dulces y llenos de sabor, perfectos para cualquier momento de antojo. Ideales para acompañar tus comidas o para disfrutar fríos en reuniones y fiestas, fáciles de tomar y siempre listos para brindar un toque dulce y divertido con un precio de tan solo $10 pesos y $25 pesos..</b></p>
+    </div>
+</div>
+
+<!-- Secciones Consulta, Alta y Baja (igual que antes) -->
+<div id="consulta-section" class="section">
+    <h2>Consulta de Productos</h2>
+    <div id="consulta-list"></div>
+</div>
+
+<div id="alta-section" class="section">
+    <h2>Alta de Productos</h2>
+    <form id="alta-form">
+        <!-- productos repetidos con inputs de cantidad -->
+        <div class="producto">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_686131-MLU70065185563_062023-F.webp" alt="Maruchan">
+            <p class="descripcion"><b>Maruchan — Precio: $18</b></p>
+            <input type="number" id="cant1" min="0" value="1">
+        </div>
+        <div class="producto">
+            <img src="https://imgs.search.brave.com/_UeoqklnGzApqAb20LlXNgsYS0kQYrQAFwnqfBgJ8ZY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzc5OTE3MC1NTE03/MDY1MzI2NzI1M18w/NzIwMjMtRS1zZXQt/ZGUtcGVyZnVtZXMt/aGVsbG8ta2l0dHkt/eS1oZWxsby1mcm9z/dGVkLWNvY29udXQt/ZC1mdWxsZXIud2Vi/cA" alt="Hello Kitty">
+            <p class="descripcion"><b>Perfume Hello Kitty — Precio: $80</b></p>
+            <input type="number" id="cant2" min="0" value="1">
+        </div>
+        <div class="producto">
+            <img src="https://imgs.search.brave.com/M07LvhjESTzBsV0QgSDylAj8U-omGr2SJ1oYP_1KZEo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2EyL2I3/LzhiL2EyYjc4Yjhm/MzkyNTIwYjEwOWUy/OTVmYmY1YjI1Y2I2/LmpwZw" alt="Sabritas">
+            <p class="descripcion"><b>Sabritas — Precio: $15</b></p>
+            <input type="number" id="cant3" min="0" value="1">
+        </div>
+        <div class="producto">
+            <img src="https://www.tiendas3b.com/wp-content/uploads/2025/05/NUESTRO-CAMPO_Ensalada-de-verduras-430g_02.jpg" alt="Verduras">
+            <p class="descripcion"><b>Verduras — Precio: $25</b></p>
+            <input type="number" id="cant4" min="0" value="1">
+        </div>
+        <div class="producto">
+            <img src="https://imgs.search.brave.com/RxL-l_fLagR6ALhwWk1UH-7E6cWs_EtGj8bLhQrZrek/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y29jaW5hdml0YWwu/bXgvd3AtY29udGVu/dC91cGxvYWRzLzIw/MjQvMDkvcmVmcmVz/Y29zLW1lbm9zLWF6/dWNhci02MzR4NDIw/LmpwZw" alt="Refrescos">
+            <p class="descripcion"><b>Refrescos — Precio: $10</b></p>
+            <input type="number" id="cant5" min="0" value="1">
+        </div>
+        <button type="submit">Agregar Seleccionados</button>
+    </form>
+</div>
+
+<div id="baja-section" class="section">
+    <h2>Baja de Productos</h2>
+    <p>Haz clic en "Eliminar" para quitar un producto:</p>
+    <div id="baja-list"></div>
+</div>
+
+<img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/3B_logo.svg/800px-3B_logo.svg.png?20220723190921" alt="Logo Tiendas 3B">
+
+<script>
+const productosBtn = document.getElementById("productos-btn");
+const bienvenido = document.getElementById("bienvenido");
+const productosSection = document.getElementById("productos-section");
+const menuNav = document.getElementById("menu-nav");
+const consultaRadio = document.getElementById("consulta");
+const altaRadio = document.getElementById("alta");
+const bajaRadio = document.getElementById("baja");
+
+// Mostrar productos al dar click en el botón
+productosBtn.addEventListener("click", () => {
+    bienvenido.style.display = "none";
+    document.getElementById("productos-btn-container").style.display = "none";
+    menuNav.style.display = "flex";
+    productosSection.style.display = "block";
+});
+
+// Función para mostrar sección y ocultar productos
+function mostrarSeccion(seccionId) {
+    productosSection.style.display = "none"; // ocultar productos
+    document.getElementById("consulta-section").style.display = "none";
+    document.getElementById("alta-section").style.display = "none";
+    document.getElementById("baja-section").style.display = "none";
+    document.getElementById(seccionId).style.display = "block";
+}
+
+// Eventos de los radios
+consultaRadio.addEventListener("change", () => mostrarSeccion("consulta-section"));
+altaRadio.addEventListener("change", () => mostrarSeccion("alta-section"));
+bajaRadio.addEventListener("change", () => mostrarSeccion("baja-section"));
+
+// Código Alta/Consulta/Baja (igual que antes)
+const altaForm = document.getElementById("alta-form");
+const consultaList = document.getElementById("consulta-list");
+const bajaList = document.getElementById("baja-list");
+
+const productosIniciales = [
+    {id:1, nombre:'Maruchan', precio:18, img:'https://http2.mlstatic.com/D_NQ_NP_2X_686131-MLU70065185563_062023-F.webp'},
+    {id:2, nombre:'Perfume Hello Kitty', precio:80, img:'https://imgs.search.brave.com/_UeoqklnGzApqAb20LlXNgsYS0kQYrQAFwnqfBgJ8ZY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzc5OTE3MC1NTE03/MDY1MzI2NzI1M18w/NzIwMjMtRS1zZXQt/ZGUtcGVyZnVtZXMt/aGVsbG8ta2l0dHkt/eS1oZWxsby1mcm9z/dGVkLWNvY29udXQt/ZC1mdWxsZXIud2Vi/cA'},
+    {id:3, nombre:'Sabritas', precio:15, img:'https://imgs.search.brave.com/M07LvhjESTzBsV0QgSDylAj8U-omGr2SJ1oYP_1KZEo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2EyL2I3/LzhiL2EyYjc4Yjhm/MzkyNTIwYjEwOWUy/OTVmYmY1YjI1Y2I2/LmpwZw'},
+    {id:4, nombre:'Verduras', precio:25, img:'https://www.tiendas3b.com/wp-content/uploads/2025/05/NUESTRO-CAMPO_Ensalada-de-verduras-430g_02.jpg'},
+    {id:5, nombre:'Refrescos', precio:10, img:'https://imgs.search.brave.com/RxL-l_fLagR6ALhwWk1UH-7E6cWs_EtGj8bLhQrZrek/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y29jaW5hdml0YWwu/bXgvd3AtY29udGVu/dC91cGxvYWRzLzIw/MjQvMDkvcmVmcmVz/Y29zLW1lbm9zLWF6/dWNhci02MzR4NDIw/LmpwZw'}
+];
+
+let productosSeleccionados = [];
+
+function renderProductoLista(producto, lista, mostrarEliminar=false){
+    const div = document.createElement("div");
+    div.className = "producto";
+    div.innerHTML = `
+        <img src="${producto.img}" alt="${producto.nombre}">
+        <p class="descripcion"><b>${producto.nombre} — Precio: $${producto.precio} — Cantidad: ${producto.cantidad}</b></p>
+    `;
+    if(mostrarEliminar){
+        const btn = document.createElement("button");
+        btn.textContent = "Eliminar";
+        btn.className = "small";
+        btn.onclick = () => {
+            if(producto.elementosConsulta) producto.elementosConsulta.remove();
+            div.remove();
+            productosSeleccionados = productosSeleccionados.filter(p => p !== producto);
+            alert(`${producto.nombre} eliminado correctamente.`);
+        };
+        div.appendChild(btn);
+    }
+    lista.appendChild(div);
+    return div;
+}
+
+altaForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    let agregados = 0;
+    productosIniciales.forEach((p,i)=>{
+        const cantidad = parseInt(document.getElementById('cant'+(i+1)).value);
+        if(cantidad > 0){
+            const producto = {...p, cantidad};
+            productosSeleccionados.push(producto);
+            producto.elementosConsulta = renderProductoLista(producto, consultaList);
+            renderProductoLista(producto, bajaList, true);
+            agregados++;
+        }
+        document.getElementById('cant'+(i+1)).value=1;
+    });
+    if(agregados>0){
+        alert("Productos agregados exitosamente!");
+    }
+});
+</script>
+
+</body>
+</html>
